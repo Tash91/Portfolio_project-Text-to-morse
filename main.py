@@ -3,7 +3,7 @@
 
 #dictionary containing letters as keys and morsse code as values
 
-more_dictionary = {'A': '.---', 'B':'---...', 'C':'--- . --- .', 'D':'--- . .', 'E':'.','F':'. . --- .','G':'--- --- .','H':'. . . .',
+morse_dictionary = {'A': '.---', 'B':'---...', 'C':'--- . --- .', 'D':'--- . .', 'E':'.','F':'. . --- .','G':'--- --- .','H':'. . . .',
 'I':'. .', 'J':'. --- --- ---', 'K':'--- . ---', 'L':'. --- . .', 'M':'--- ---', 'N':'--- .', 'O': '--- --- ---', 'P':'. --- --- .', 
 'Q':'--- --- . ---', 'R':'. --- .', 'S':'. . .', 'T':'---', 'U':'. . ---',
 'V':'. . . ---', 'W':'. --- ---', 'X': '--- . . ---', 'Y':'--- . --- ---',
@@ -14,3 +14,19 @@ more_dictionary = {'A': '.---', 'B':'---...', 'C':'--- . --- .', 'D':'--- . .', 
 
 }
 
+user_input = input("Type text to convert to Morse code\n")
+
+user_input = user_input.upper()
+
+converted_word = []
+
+for word in user_input:
+    #user_input.upper()
+    if word in morse_dictionary:
+        add_letter = morse_dictionary[word]
+        converted_word.append(add_letter)
+
+conversion = "".join(converted_word)
+
+
+print (conversion)
