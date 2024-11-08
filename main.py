@@ -21,7 +21,6 @@ user_input = user_input.upper()
 converted_word = []
 
 for word in user_input:
-    #user_input.upper()
     if word in morse_dictionary:
         add_letter = morse_dictionary[word]
         converted_word.append(add_letter)
